@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <unordered_map>
 
-/* Sorting : Time Complexity O(nlogn + mlogm) Space Complexity O(1) or O(n + m) depending on the sorting algorithm
+// Sorting : Time Complexity O(nlogn + mlogm) Space Complexity O(1) or O(n + m) depending on the sorting algorithm
 bool isAnagram(std::string s, std::string t) {
     
 	if (s.size() != t.size())
@@ -15,9 +15,10 @@ bool isAnagram(std::string s, std::string t) {
 	std::sort(t.begin(), t.end());
 	return s == t;
 }
-*/
 
-/* Hash map : Time Complexity O(n + m) Space Complexity O(1).
+//-------------------------------------------------------------
+
+// Hash map : Time Complexity O(n + m) Space Complexity O(1).
 bool isAnagram(std::string s, std::string t) {
 
 	if (s.length() != t.length())
@@ -34,9 +35,10 @@ bool isAnagram(std::string s, std::string t) {
 	}
 	return countS == countT;
 }
-*/
 
-/* Hash map using array: Time Complexity O(n + m) Space Complexity O(1).
+//-------------------------------------------------------------
+
+// Hash map using array: Time Complexity O(n + m) Space Complexity O(1).
 bool isAnagram(std::string s, std::string t) {
 	if (s.length() != t.length()) {
 		return false;
@@ -55,5 +57,5 @@ bool isAnagram(std::string s, std::string t) {
 	}
 	return true;
 }
-*/
+
 
