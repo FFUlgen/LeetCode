@@ -45,7 +45,7 @@ Given an integer array nums, return true if any value appears at least twice in 
 
 
 // Brute Force : Time Complexity O(n^2) Space Complexity(1)
-bool HasDuplicate(std::vector<int>& nums)
+bool HasDuplicate_1(std::vector<int>& nums)
 {
 	for (size_t i = 0; i < nums.size(); i++)
 	{
@@ -60,7 +60,7 @@ bool HasDuplicate(std::vector<int>& nums)
 //-------------------------------------------------------------
 
 // Sorting : Time Complexity O(nlogn) Space Complexity(1) or O(n) depending on the sorting algorithm.
-bool HasDuplicate(std::vector<int>& nums)
+bool HasDuplicate_2(std::vector<int>& nums)
 {
 	std::sort(nums.begin(), nums.end());
 
@@ -74,7 +74,7 @@ bool HasDuplicate(std::vector<int>& nums)
 //-------------------------------------------------------------
 
 // Hash set : Time Complexity O(n) Space Complexity(n).
-bool HasDuplicate(std::vector<int>& nums)
+bool HasDuplicate_3(std::vector<int>& nums)
 {
 	std::unordered_set<int> seenValues;
 	for (int &num : nums)
@@ -88,7 +88,7 @@ bool HasDuplicate(std::vector<int>& nums)
 //-------------------------------------------------------------
 
 // Hash set with find() instead of count() : Time Complexity O(n) Space Complexity(n).
-bool HasDuplicate(std::vector<int>& nums)
+bool HasDuplicate_4(std::vector<int>& nums)
 {
 	std::unordered_set<int> seenValues;
 	for (size_t i = 0; i < nums.size(); i++)
@@ -105,7 +105,7 @@ bool HasDuplicate(std::vector<int>& nums)
 //-------------------------------------------------------------
 
 // Hash set length : Time Complexity O(n) Space Complexity(n).
-bool HasDuplicate(std::vector<int>& nums)
+bool HasDuplicate_5(std::vector<int>& nums)
 {
 	return std::unordered_set<int>(nums.begin(), nums.end()).size() < nums.size();
 };

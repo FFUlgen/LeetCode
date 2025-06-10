@@ -30,7 +30,7 @@ Given two strings s and t, return true if t is an anagram of s, and false otherw
 
 
 // Sorting : Time Complexity O(nlogn + mlogm) Space Complexity O(1) or O(n + m) depending on the sorting algorithm
-bool isAnagram(std::string s, std::string t) {
+bool isAnagram_1(std::string s, std::string t) {
     
 	if (s.size() != t.size())
 	{
@@ -45,7 +45,7 @@ bool isAnagram(std::string s, std::string t) {
 //-------------------------------------------------------------
 
 // Hash map : Time Complexity O(n + m) Space Complexity O(1).
-bool isAnagram(std::string s, std::string t) {
+bool isAnagram_2(std::string s, std::string t) {
 
 	if (s.length() != t.length())
 	{
@@ -65,7 +65,7 @@ bool isAnagram(std::string s, std::string t) {
 //-------------------------------------------------------------
 
 // Hash map using array: Time Complexity O(n + m) Space Complexity O(1).
-bool isAnagram(std::string s, std::string t) {
+bool isAnagram_3(std::string s, std::string t) {
 	if (s.length() != t.length()) {
 		return false;
 	}

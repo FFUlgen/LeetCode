@@ -30,7 +30,7 @@ Example 2 :
 
 
 // Hash Map (Two Pass) : Time Complexity O(n) Space Complexity O(n)
-std::vector<int> TwoSum(std::vector<int>& Nums, int Target)
+std::vector<int> TwoSum_1(std::vector<int>& Nums, int Target)
 {
 	std::unordered_map<int, int> Hash;
 
@@ -50,7 +50,7 @@ std::vector<int> TwoSum(std::vector<int>& Nums, int Target)
 }
 
 // Hash Map (One Pass) : Time Complexity O(n) Space Complexity O(n)
-std::vector<int> TwoSum(std::vector<int>& Nums, int Target)
+std::vector<int> TwoSum_2(std::vector<int>& Nums, int Target)
 {
 	std::unordered_map<int, int> Hash;
 
