@@ -28,6 +28,71 @@ Description
 		0 <= strs[i].length < 200
 		strs[i] contains only UTF - 8 characters.
 */
+std::string Encode(std::vector<std::string>& strs)
+{
+	std::string res = "";
+
+	for (std::string& str : strs)
+	{
+		res += std::to_string(str.length()) + "#" + str;
+	}
+	return res;
+}
+
+std::vector<std::string> Decode(std::string& str)
+{
+	std::vector<std::string> res;
+
+	int i = 0;
+
+	while (i < str.length())
+	{
+		int j = i;
+
+		while (str[j] != '#')
+		{
+			j++;
+		}
+
+		int length = std::stoi(str.substr(i, j - i));
+		i = j + 1;
+		j = i + length;
+		res.push_back(str.substr(i, length));
+
+		i = j;
+	}
+
+
+
+	return res;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Time Complexity : O(m) for each Encode() and Decode() calls, Space Complexity O(m + n) for each Encode() and Decode() function calls. 
