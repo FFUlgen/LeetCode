@@ -25,7 +25,7 @@
 
 // Hash Set - One Pass
 // Time complexity :O(n^2) Space complexity : O(n^2)
-bool isValidSudoku(std::vector<std::vector<char>>& board) {
+bool isValidSudoku1(std::vector<std::vector<char>>& board) {
     std::unordered_map<int, std::unordered_set<char>> rows, columns;
     std::map<std::pair<int, int>, std::unordered_set<char>> squares;
 
@@ -49,7 +49,7 @@ bool isValidSudoku(std::vector<std::vector<char>>& board) {
 
 // Bitmask
 // Time complexity :O(n^2) Space complexity : O(n)
-bool isValidSudoku(std::vector<std::vector<char>>& board) {
+bool isValidSudoku2(std::vector<std::vector<char>>& board) {
     int rows[9] = { 0 };
     int cols[9] = { 0 };
     int squares[9] = { 0 };

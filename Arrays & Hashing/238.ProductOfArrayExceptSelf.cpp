@@ -27,7 +27,7 @@ Description
 */
 
 // Time Complexity O(n) Space Complexity O(n) + O(1)
-std::vector<int> ProductOfArrayExceptSelf(std::vector<int>& nums)
+std::vector<int> ProductOfArrayExceptSelf1(std::vector<int>& nums)
 {
 	int product = 1;
 	int zeroCount = 0;
@@ -50,7 +50,7 @@ std::vector<int> ProductOfArrayExceptSelf(std::vector<int>& nums)
 }
 
 // Time complexity :O(n) Space complexity : O(n) + O(1)
-std::vector<int> ProductOfArrayExceptSelf(std::vector<int>& nums)
+std::vector<int> ProductOfArrayExceptSelf2(std::vector<int>& nums)
 {
 	int n = nums.size();
 	std::vector<int> res(n, 1);
