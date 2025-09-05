@@ -54,40 +54,17 @@ int longestConsecutive(std::vector<int>& nums) {
 
 // Hash Map : Time Complexity O(n) Space Complexity O(n)
 int longestConsecutive(std::vector<int>& nums) {
-	std::unordered_map<int, int> mp;
-	int res = 0;
+	std::unordered_map<int, int> numMap;
+	int longest = 0;
 
 	for (int num : nums) 
 	{
-		if (!mp[num]) 
+		if (!numMap[num])
 		{
-			mp[num] = mp[num - 1] + mp[num + 1] + 1;
-			mp[num - mp[num - 1]] = mp[num];
-			mp[num + mp[num + 1]] = mp[num];
-			res = std::max(res, mp[num]);
-		}
-	}
-	return res;
-}
-
-
-int longestConsecutiveSequence(std::vector<int>& nums)
-{
-	std::unordered_set<int> numSet(nums.begin(), nums.end());
-	int longest{0};
-
-	for (const int num : numSet)
-	{
-		if (numSet.find(num - 1) == numSet.end())
-		{
-			int length{ 1 };
-			while (numSet.count(num + length))
-			{
-				length++;
-			}
-			longest = std::max(longest, length);
-			if (length > longest)
-				longest = length;
+			numMap[num] = numMap[num - 1] + numMap[num + 1] + 1;
+			numMap[num - numMap[num - 1]] = numMap[num];
+			numMap[num + numMap[num + 1]] = numMap[num];
+			longest = std::max(longest, numMap[num]);
 		}
 	}
 	return longest;
