@@ -53,7 +53,7 @@ int longestConsecutive(std::vector<int>& nums) {
 }
 
 // Hash Map : Time Complexity O(n) Space Complexity O(n)
-int longestConsecutive(std::vector<int>& nums) {
+int longestConsecutive2(std::vector<int>& nums) {
 	std::unordered_map<int, int> numMap;
 	int longest = 0;
 
