@@ -53,7 +53,6 @@ int evalRPN(std::vector<std::string>& tokens) {
 		{
 			stack.push(std::stoi(token));
 		}
-	
 	}
 	return stack.top();
 }
